@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal Simulation</title>
+</head>
+
+<body>
+
+    <h2>Simulación de Compra con PayPal</h2>
+    <button id="pay-button">Pagar con PayPal</button>
+
+    <script>
+        document.getElementById('pay-button').addEventListener('click', async () => {
+            try {
+                const response = await fetch('/api/paypal');
+                const data = await response.json();
+
+                if (data.approval_url) {
+                    window.location.href = data.approval_url; // Redirige al usuario a PayPal
+                } else {
+                    alert('Error al crear el pago.');
+                }
+            } catch (error) {
+                console.error('Error al obtener la URL de PayPal:', error);
+                alert('Hubo un problema al procesar la solicitud.');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

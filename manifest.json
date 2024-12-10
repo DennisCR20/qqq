@@ -1,0 +1,21 @@
+{
+    "name": "GameZone",
+    "short_name": "Tienda Virtual",
+    "description": "by Denis Sanchez Valderramos",
+    "start_url": "/model/index.html",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#808080",
+    "icons": [
+        {
+            "src": "/assets/icon/primera.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/icon/segunda.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

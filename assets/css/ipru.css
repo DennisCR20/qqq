@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    background-color: #333;
+    /* Color de fondo del header */
+    position: fixed;
+    /* Fija el header en la parte superior */
+    top: 0;
+    /* Posición en el top */
+    width: 100%;
+    /* Ancho completo */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+.containerme {
+    display: flex;
+    /* Disposición en línea */
+    justify-content: space-around;
+    /* Espaciado entre elementos */
+    padding: 10px 0;
+    /* Espaciado superior e inferior */
+}
+
+.cardme {
+    display: flex;
+    /* Flex para alinear icono y texto */
+    align-items: center;
+    /* Centrar verticalmente */
+    color: #ffffff;
+    /* Color del texto */
+    text-decoration: none;
+    /* Sin subrayado en enlaces */
+    padding: 10px;
+    /* Espaciado alrededor de la tarjeta */
+}
+
+.cardme p {
+    margin-left: 8px;
+    /* Espaciado entre el icono y el texto */
+}
+
+/* Para evitar que el contenido sea cubierto por el header fijo */
+.contentme {
+    padding-top: 60px;
+    /* Espacio suficiente para el header */
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 4 columnas en pantallas grandes */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    /* Limitar el ancho máximo para mejor visualización */
+}
+
+.card {
+    background-color: #2e2d2d;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px rgb(12, 12, 12);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgb(255, 255, 255);
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        /* Mantener 4 columnas en tabletas */
+        gap: 15px;
+    }
+
+    .card img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .card p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        /* Mantener 4 columnas en móviles */
+        gap: 10px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card img {
+        width: 35px;
+        height: 35px;
+        /* Ajustar tamaño de los iconos */
+    }
+
+    .card p {
+        font-size: 12px;
+        /* Reducir texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        /* Mantener 4 columnas incluso en móviles pequeños */
+        gap: 5px;
+        /* Reducir el espacio entre las tarjetas */
+    }
+
+    .card {
+        padding: 8px;
+    }
+
+    .card img {
+        width: 30px;
+        height: 30px;
+        /* Ajustar aún más los iconos */
+    }
+
+    .card p {
+        font-size: 11px;
+        /* Reducir más el texto */
+    }
+}

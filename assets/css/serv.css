@@ -1,0 +1,59 @@
+body {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    background-color: #333;
+    /* Color de fondo del header */
+    position: fixed;
+    /* Fija el header en la parte superior */
+    top: 0;
+    /* Posición en el top */
+    width: 100%;
+    /* Ancho completo */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+.containerme {
+    display: flex;
+    /* Disposición en línea */
+    justify-content: space-around;
+    /* Espaciado entre elementos */
+    padding: 10px 0;
+    /* Espaciado superior e inferior */
+}
+
+.card {
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+.text-body-secondary {
+    color: #888;
+}

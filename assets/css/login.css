@@ -1,0 +1,81 @@
+body {
+    background-image: url('../img/tia.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    background-color: #333;
+    /* Color de fondo del header */
+    position: fixed;
+    /* Fija el header en la parte superior */
+    top: 0;
+    /* Posición en el top */
+    width: 100%;
+    /* Ancho completo */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+.containerme {
+    display: flex;
+    /* Disposición en línea */
+    justify-content: space-around;
+    /* Espaciado entre elementos */
+    padding: 10px 0;
+    /* Espaciado superior e inferior */
+}
+
+.card {
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(99, 94, 94, 0.8);
+    background-color: rgba(129, 123, 123, 0.8);
+    /* Fondo semi-transparente para la tarjeta */
+}
+
+.card img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    height: 50px;
+}
+
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: red;
+}
+
+#message p {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#message p[style="color: green;"] {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+#message p[style="color: red;"] {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}

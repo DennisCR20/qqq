@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+    <div class="onboarding-container">
+        <div class="onboarding-slide">
+            <div class="onboarding-card">
+                <!-- El botón de salto ya no es necesario, usaremos localStorage para gestionar el flujo -->
+                <br>
+                <img src="/assets/img/primeraVista.png" alt="Imagen 1">
+                <p>Bienvenido a GameZone, estas son nuestras diferentes opciones.</p>
+                <button class="continue-button" onclick="nextSlide()">Continuar</button>
+            </div>
+        </div>
+        <div class="onboarding-slide" style="display:none;">
+            <div class="onboarding-card">
+                <br>
+                <img src="/assets/img/segundaVista.png" alt="Imagen 2">
+                <p>Aquí podrás encontrar una buena cantidad de productos que comprar.</p>
+                <button class="continue-button" onclick="nextSlide()">Continuar</button>
+            </div>
+        </div>
+        <div class="onboarding-slide" style="display:none;">
+            <div class="onboarding-card">
+                <img src="/assets/img/terceraVista.png" alt="Imagen 3">
+                <p>Por último, podrás explorar nuestros servicios de mantenimiento y reparación.</p>
+                <button class="continue-button" onclick="finishOnboarding()">Finalizar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Función para cambiar a la siguiente diapositiva
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.onboarding-slide');
+
+        function nextSlide() {
+            slides[currentSlide].style.display = 'none'; // Ocultar la diapositiva actual
+            currentSlide++;  // Avanzar al siguiente slide
+            if (currentSlide < slides.length) {
+                slides[currentSlide].style.display = 'block'; // Mostrar la siguiente diapositiva
+            }
+        }
+
+        // Función que finaliza el onboarding
+        function finishOnboarding() {
+            // Marcar que el onboarding ha sido completado en localStorage
+            localStorage.setItem('onboardingCompleted', 'true');
+            // Redirigir al index o página principal
+            window.location.href = '/';  // Cambia a la ruta de tu página principal
+        }
+
+        // Comprobar si ya se completó el onboarding
+        if (localStorage.getItem('onboardingCompleted')) {
+            // Si el onboarding ya fue completado, redirigir automáticamente al index
+            window.location.href = '/';  // Cambia a la ruta de tu página principal
+        }
+    </script>
+
+</body>
+
+</html>

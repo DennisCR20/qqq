@@ -1,0 +1,76 @@
+/* Estilos de onboarding */
+.onboarding-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.onboarding-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.onboarding-card {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+}
+
+.onboarding-card img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.continue-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000000;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.continue-button:hover {
+    background-color: #525252;
+}
+
+#skipButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000000;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#skipButton:hover {
+    background-color: #525252;
+}
+
+
+/* Ocultar la aplicación hasta que termine el onboarding */
+#app {
+    display: none;
+}
